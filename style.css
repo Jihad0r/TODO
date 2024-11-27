@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: MyCustomFont;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("/font/JosefinSans-VariableFont_wght.ttf");
+}
+.upgrade {
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  width: 20%;
+  display: none;
+  transform: translate(50%, -50%);
+  padding: 20px 10px;
+  z-index: 3;
+  background-color: hsl(235, 24%, 19%);
+  border-radius: 10px;
+  text-align: center;
+  color: hsl(0, 0%, 98%);
+}
+.upgrade.light {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(235, 24%, 19%);
+}
+
+.backgroundimg {
+  position: relative;
+}
+.backgroundimg img {
+  position: absolute;
+  top: -2rem;
+  z-index: 1;
+}
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(235, 21%, 11%);
+  z-index: 0;
+  width: 100%;
+}
+.container {
+  position: absolute;
+  top: 55%;
+  right: 50%;
+  bottom: 0;
+  height: 100%;
+  transform: translate(50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  z-index: 2;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head h1 {
+  letter-spacing: 20px;
+  color: white;
+  font-size: 50px;
+}
+.head .image .moon {
+  display: none;
+}
+.input {
+  position: relative;
+}
+.submit {
+  position: absolute;
+  top: 20%;
+  left: 3%;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid hsl(233, 14%, 35%);
+}
+input {
+  background-color: hsl(235, 24%, 19%);
+  font-family: MyCustomFont;
+  border: none;
+  padding: 10px;
+  height: 30px;
+  font-size: 20px;
+  color: hsl(0, 0%, 98%);
+  padding-left: 10%;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  width: -webkit-fill-available;
+}
+input:focus-visible {
+  outline: none;
+}
+.list {
+  background-color: hsl(235, 24%, 19%);
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 0px #00000036;
+}
+input.light {
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(233, 14%, 35%);
+}
+.list.light {
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0px 0px 20px 0px #00000036;
+}
+.list.light .task p {
+  color: hsl(233, 14%, 35%);
+}
+.task {
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 3rem;
+}
+.check {
+  padding: 0px 4px;
+  background-image: none;
+  border: 1px solid hsl(234, 39%, 85%);
+  border-radius: 50%;
+}
+.check.done {
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.check img {
+  opacity: 0;
+  width: 9px;
+}
+.check.done img {
+  opacity: 1;
+}
+.check.done + p div {
+  position: absolute;
+  display: block;
+  border-bottom: 2px solid hsl(234, 39%, 85%);
+  top: 50%;
+  width: 100%;
+}
+.list.light .check {
+  border: 1px solid hsl(235, 19%, 35%);
+}
+.check + p div {
+  display: none;
+}
+.task p {
+  position: relative;
+  color: hsl(234, 39%, 85%);
+  margin-left: 10px;
+}
+.check.done + p {
+  color: hsl(234, 39%, 85%);
+  opacity: 0.2;
+  margin-left: 10px;
+}
+.list.light .check.done + p {
+  color: hsl(233, 14%, 75%);
+  opacity: 0.7;
+  margin-left: 10px;
+}
+.task .cross {
+  position: absolute;
+  display: none;
+  top: 33%;
+  right: 0%;
+}
+.task:hover .cross {
+  display: block;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  color: hsl(233, 14%, 35%);
+}
+
+.show {
+  color: hsl(233, 14%, 35%);
+}
+div.show p {
+  margin-top: 20px;
+  padding: 20px 10px;
+  background-color: hsl(235, 24%, 19%);
+  display: flex;
+  justify-content: space-evenly;
+}
+div.show.light p.show {
+  background-color: hsl(0, 0%, 98%);
+  box-shadow: 0px 0px 20px 0px #00000036;
+  color: hsl(233, 14%, 85%);
+}
+div.show.light p {
+  color: hsl(233, 14%, 35%);
+}
+
+.footer p:first-of-type:hover,
+.show *:hover,
+.clear:hover {
+  color: hsl(233, 14%, 85%);
+}
+.list.light .footer {
+  color: hsl(235, 19%, 85%);
+}
+.list.light .footer p:first-of-type:hover,
+.show *:hover,
+.clear:hover {
+  color: hsl(235, 19%, 35%);
+}
+.show span:first-of-type {
+  color: hsl(220, 98%, 61%);
+}
+.footer *:not(.left) {
+  margin-right: 20px;
+}
+.left {
+  margin-right: 5px;
+}
+.container .msg {
+  color: hsl(233, 14%, 35%);
+  opacity: 0.3;
+  text-align: center;
+}
+@media (max-width: 1120px) {
+  .backgroundimg img {
+    width: 100%;
+    height: 20rem;
+  }
+  .container {
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: unset;
+    padding-top: 3rem;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
